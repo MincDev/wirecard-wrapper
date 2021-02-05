@@ -1,5 +1,5 @@
 {
-    "name": "mincdev/mygate-wrapper",
+    "name": "mincdev/wirecard-wrapper",
     "description": "A wrapper to ease integration into Wirecard (previously MyGate) webservices.",
     "license": "MIT",
     "authors": [
