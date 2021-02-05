@@ -82,7 +82,7 @@ class SalesItem
      */ 
     public function getTotalAmount(): string
     {
-        return number_format($this->totalAmount, 2, ",", "");
+        return number_format($this->totalAmount, 2, ".", "");
     }
 
     /**
