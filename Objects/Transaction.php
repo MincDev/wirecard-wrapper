@@ -98,7 +98,7 @@ class Transaction
      */ 
     public function getAmount(): string
     {
-        return number_format($this->amount, 2);
+        return number_format($this->amount, 2, ".", "");
     }
 
     /**
