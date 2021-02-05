@@ -1,0 +1,16 @@
+{
+    "name": "mincdev/mygate-wrapper",
+    "description": "A wrapper to ease integration into Wirecard (previously MyGate) webservices.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher Smit",
+            "email": "chris@imagin8.co.za"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Wrapper\\": "."
+        }
+    }
+}
