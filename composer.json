@@ -3,7 +3,7 @@
     "description": "A wrapper to ease integration into Wirecard (previously MyGate) webservices.",
     "license": "MIT",
     "minimum-stability": "stable",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Christopher Smit",
