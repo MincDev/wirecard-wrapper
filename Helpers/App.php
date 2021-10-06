@@ -2,6 +2,8 @@
 
 namespace Wrapper\Helpers;
 
+use Throwable;
+
 class App 
 {
     public function toXML($array, $rootElement = null, $xml = null) { 
@@ -34,9 +36,13 @@ class App
 
     public function getIpAddress(): string
     {
-        $externalContent = file_get_contents('http://checkip.dyndns.com/');
-        preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent, $m);
-        return $m[1];
+        try {
+            $externalContent = @file_get_contents('http://checkip.dyndns.com/');
+            preg_match('/Current IP Address: \[?([:.0-9a-fA-F]+)\]?/', $externalContent ?? "", $m);
+            return $m[1] ?? $_SERVER['REMOTE_ADDR'];
+        } catch (Throwable $ex) {
+            return $_SERVER['REMOTE_ADDR'];
+        }
     }
 
     public function initializeSoapClient($WSDL, $KeyCert = "", $Location = "") {
