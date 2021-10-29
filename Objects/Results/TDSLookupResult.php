@@ -25,16 +25,16 @@ class TDSLookupResult
         $this->status = $response->status;
         $this->uidTransactionIndex = $response->uidTransactionIndex;
         $this->transactionDateTime = $response->TransactionDateTime;
-        $this->tdsLookupCode = $response->tdsLookup->code;
+        $this->tdsLookupCode = $response->tdsLookup->code ?? "";
         $this->tdsLookupMessage = $response->tdsLookup->message;
         $this->tdsLookupAuthRequired = $response->tdsLookup->authRequired;
         $this->tdsLookupLiabilityShift = $response->tdsLookup->liabilityShift;
         $this->tdsLookupCcAuthAllowed = $response->tdsLookup->ccAuthAllowed;
         $this->tdsLookupEciFlag = $response->tdsLookup->eciFlag;
-        $this->tdsLookupEnrolled = $response->tdsLookup->enrolled;
-        $this->tdsLookupAcsUrl = $response->tdsLookup->acsUrl;
-        $this->tdsLookupPayload = $response->tdsLookup->payload;
-        $this->tdsLookupAction = $response->tdsLookup->action;
+        $this->tdsLookupEnrolled = $response->tdsLookup->enrolled ?? "";
+        $this->tdsLookupAcsUrl = $response->tdsLookup->acsUrl ?? "";
+        $this->tdsLookupPayload = $response->tdsLookup->payload ?? "";
+        $this->tdsLookupAction = $response->tdsLookup->action ?? "";
     }
 
     /**
