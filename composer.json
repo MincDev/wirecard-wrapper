@@ -1,6 +1,6 @@
 {
     "name": "mincdev/wirecard-wrapper",
-    "description": "A wrapper to ease integration into Wirecard (previously MyGate) webservices.",
+    "description": "A wrapper to ease integration into Adumo (previously Wirecard / MyGate) webservices.",
     "license": "MIT",
     "minimum-stability": "stable",
     "version": "1.1.3",
