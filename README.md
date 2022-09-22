@@ -14,7 +14,7 @@ composer require mincdev/wirecard-wrapper
 # Example
 
 Initialise the service
-```
+```php
 $adumo = new WirecardDelegate([
     'merchantUID'     => '9BA5008C-08EE-4286-A349-54AF91A621B0', // Your Merchant UID
     'applicationUID'  => '23ADADC0-DA2D-4DAC-A128-4845A5D71293', // Your Application UID
@@ -23,7 +23,7 @@ $adumo = new WirecardDelegate([
 ```
 
 Set the transaction information and the card. You can use test cards in the testing environment.
-```
+```php
 // Create the transaction
 $transaction = new Transaction(9.95, "Your Merchant Reference");
 $adumo->setTransaction($transaction);
@@ -36,7 +36,7 @@ $card = new Card("Joe Soap", "4111111111111111", "10", "2027", 001);
 ```
 
 Do a 3D Secure Lookup to see if 3D Secure is required for this card
-```
+```php
 $tdsLookupResult = $adumo->setCard($card)
                          ->lookup3DSecure();
 
@@ -50,7 +50,7 @@ if ($tdsLookupResult->getTdsLookupAuthRequired() == "Y") {
 ```
 
 On your return URL capture the POST variables and do the following
-```
+```php
 $tdsAuthenticateResult = $adumo->tdsAuthenticate($_POST["MD"], $_POST["PaRes"]);
 
 if ($tdsAuthenticateResult->getTdsAuthCcAuthAllowed() == "Y" && 
@@ -81,4 +81,4 @@ Action 21 : createToken();
 Action 22 : readToken();  
 Action 23 : deleteToken();  
 
-### DISCLAIMER : This repository is not maintained by Wirecard and should be used at own risk. 
+### DISCLAIMER : This repository is not owned nor maintained by Adumo (Wirecard / MyGate) and should be used at own risk. 
