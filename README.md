@@ -1,6 +1,10 @@
 # Adumo Payment Gateway Wrapper
 A wrapper class to ease integration into Adumo (previously Wirecard / MyGate) webservices. 
 
+## Deprecation Warning
+
+This repository is deprecated and no longer being maintained. The documentation used to create this project is no longer available and integration from new projects are no longer available.
+
 ## Documentation
 This wrapper is built around the Enterprise integration documentation found on the Adumo Online website here: https://developers.adumoonline.com/enterprise.php
 
